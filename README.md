@@ -8,19 +8,13 @@ Flappy Bird played by [laya-openvino](https://github.com/rupeshs/laya-openvino):
 pip install -r requirements.txt
 ```
 
-On first run the script downloads the int8 OpenVINO IR [`rupeshs/laya-ov-int8`](https://huggingface.co/rupeshs/laya-ov-int8) from Hugging Face and caches it. To use your own export instead:
-
-```bash
-python -m laya.ov export convaiinnovations/laya --out laya-ov
-```
+On first run the script downloads the int8 OpenVINO IR [`rupeshs/laya-ov-int8`](https://huggingface.co/rupeshs/laya-ov-int8) from Hugging Face and caches it.
 
 ## Play
 
 ```bash
 python flappy_bird.py                                        # watch it play (int8 IR from Hugging Face)
 python flappy_bird.py --render none --seeds 3 --quiet        # headless score
-python flappy_bird.py --ov laya-ov                           # a local IR directory
-python flappy_bird.py --torch                                # torch backend instead
 ```
 
 | Flag | Default | Meaning |
